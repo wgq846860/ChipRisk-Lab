@@ -4,7 +4,9 @@
 
 在线地址：<https://chiprisk-lab.wgq846860.chatgpt.site>
 
-二维码文件：`qrcode.png`
+![ChipRisk Lab 首页](home.png)
+
+![网站二维码](qrcode.png)
 
 ## 从报告变量到模拟结果
 
