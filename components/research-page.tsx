@@ -1,5 +1,7 @@
 import { ExternalLink, FileDown, Sigma } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const references = [
   "NVIDIA（2025）：2026 财年第一季度财务结果",
   "NVIDIA Developer（2026）：CUDA Zone",
@@ -59,7 +61,7 @@ export function ResearchPage() {
       </section>
 
       <div className="research-actions">
-        <a className="primary-button" href="/report/%E8%8A%AF%E7%89%87%E6%88%98%E4%BA%89%E7%AE%80%E6%8A%A5.pdf" target="_blank" rel="noreferrer">查看完整简报 <FileDown size={17} /></a>
+        <a className="primary-button" href={`${basePath}/report/%E8%8A%AF%E7%89%87%E6%88%98%E4%BA%89%E7%AE%80%E6%8A%A5.pdf`} target="_blank" rel="noreferrer">查看完整简报 <FileDown size={17} /></a>
         <a className="secondary-button" href="https://github.com/Ascend/pytorch" target="_blank" rel="noreferrer">查看示例资料源 <ExternalLink size={16} /></a>
       </div>
     </section>

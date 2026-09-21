@@ -9,14 +9,16 @@ export type RiskDriver = {
 const exposure = (value: number) => Math.round(((value - 1) / 4) * 100);
 
 export function rankRiskDrivers(inputs: Inputs): RiskDriver[] {
-  return [
+  const drivers: RiskDriver[] = [
     { key: "platformDependence", label: "平台依赖", score: exposure(inputs.platformDependence) },
     { key: "migrationComplexity", label: "迁移复杂度", score: exposure(inputs.migrationComplexity) },
     { key: "alternativeMaturity", label: "替代方案不足", score: exposure(6 - inputs.alternativeMaturity) },
     { key: "supplyStability", label: "供应不稳定", score: exposure(6 - inputs.supplyStability) },
     { key: "adaptationCapability", label: "组织适配缺口", score: exposure(6 - inputs.adaptationCapability) },
     { key: "costSensitivity", label: "成本敏感度", score: exposure(inputs.costSensitivity) },
-  ].sort((a, b) => b.score - a.score);
+  ];
+
+  return drivers.sort((a, b) => b.score - a.score);
 }
 
 export function buildExplanation(inputs: Inputs, result: RiskResult) {
