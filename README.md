@@ -60,7 +60,6 @@ npm run build
 - 动态解释：`lib/explanations.ts`
 - 页面流程：`components/simulator.tsx`
 - 视觉系统：`app/globals.css`
-- 小组成员信息：在附录交付稿中替换成员占位内容。
 
 ## 使用边界
 
